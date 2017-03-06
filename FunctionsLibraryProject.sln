@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionsLibraryProject", "FunctionsLibraryProject\FunctionsLibraryProject.csproj", "{13D22BA7-F66F-48E6-A362-81780864339F}"
 EndProject
+Project("{33AD0EE8-D99B-4E14-8CD9-3F56ABEF97A2}") = "FunctionAppProject", "FunctionsLibraryProject\FunctionAppProject.funproj", "{6E54092F-5B79-4298-B485-6E74F2CDF60E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13D22BA7-F66F-48E6-A362-81780864339F} = {13D22BA7-F66F-48E6-A362-81780864339F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{13D22BA7-F66F-48E6-A362-81780864339F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13D22BA7-F66F-48E6-A362-81780864339F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13D22BA7-F66F-48E6-A362-81780864339F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E54092F-5B79-4298-B485-6E74F2CDF60E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E54092F-5B79-4298-B485-6E74F2CDF60E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E54092F-5B79-4298-B485-6E74F2CDF60E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E54092F-5B79-4298-B485-6E74F2CDF60E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
