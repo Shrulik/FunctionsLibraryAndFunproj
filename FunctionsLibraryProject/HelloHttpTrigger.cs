@@ -6,6 +6,8 @@ using System.Net;
 using System.Net.Http;
 using Microsoft.Azure.WebJobs.Host;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 
 namespace FunctionsLibraryProject
 {
@@ -13,16 +15,23 @@ namespace FunctionsLibraryProject
     {
         public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log)
         {
-            log.Info($"C# HTTP trigger function processed a request. RequestUri={req.RequestUri}");
+            log.Info($" This is the functionAppProject. RequestUri={req.RequestUri}");
 
+
+            log.Info(TestDep.DepTest.Bla());
+
+            req.CreateResponse(HttpStatusCode.Accepted);
             // parse query parameter
             string name = req.GetQueryNameValuePairs()
                 .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
                 .Value;
 
+
+            
             // Get request body
             dynamic data = await req.Content.ReadAsAsync<object>();
 
+            var la = JsonConvert.SerializeObject("bla");
             // Set name to query string or body data
             name = name ?? data?.name;
 
